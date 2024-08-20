@@ -39,27 +39,20 @@ function updateGallery(galleryObject, title, newTittle) {
   galleryObject = gallery;
 
   if (galleryObject.hasOwnProperty(title)) {
+
     // console.log("У объекта есть  это свойство ");
 
     for (const key in galleryObject) {
       if (key === title) {
         galleryObject[key] = newTittle;
       }
-      console.log(`${key}: ${galleryObject[key]}`);
+      // console.log(`${key}: ${galleryObject[key]}`);
     }
   } else {
     // console.log("У объекта не было  этого свойства");
     
-    galleryObject.title = newTittle;
-    // galleryObject = title;
-    console.log(galleryObject);
-    // for (let key in galleryObject) {
-    //   if (key === 'title') {
-    //     key = title;
-        
-    //   }
-    //   galleryObject.title = newTittle;
-    //   console.log(`${key}: ${galleryObject[key]}`);
-    // }
+    galleryObject[title] = newTittle;
+
+    // console.log(galleryObject);
   }
 }
