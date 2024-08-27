@@ -36,18 +36,19 @@ const gallery = {
 };
 
 function updateGallery(galleryObject, title, newTittle) {
-  galleryObject = gallery;
+  // galleryObject = gallery;
 
   if (galleryObject.hasOwnProperty(title)) {
+    galleryObject[title] = newTittle;
 
     // console.log("У объекта есть  это свойство ");
 
-    for (const key in galleryObject) {
-      if (key === title) {
-        galleryObject[key] = newTittle;
-      }
+    // for (const key in galleryObject) {
+    //   if (key === title) {
+    //     galleryObject[key] = newTittle;
+    //   }
       // console.log(`${key}: ${galleryObject[key]}`);
-    }
+    // }
   } else {
     // console.log("У объекта не было  этого свойства");
     
